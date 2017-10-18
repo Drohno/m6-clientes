@@ -1,0 +1,112 @@
+#fondo{
+    position: absolute;
+    z-index: -777;
+    top: -6vw;
+    left: 0;
+    width: 100%;
+    height: 114%;
+}
+
+.numero
+{
+    width: 60px;
+    height: 60px;
+}
+
+.igual
+{
+    width: 16.5vw;
+    height: 4.4vw;
+}
+
+.numero,
+.igual
+{
+    font-size: 100%;
+    font-weight: bolder;
+
+    margin: .3vw;
+    padding: 15px 15px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: #4caf50;
+    box-shadow: 0 9px #999;
+}
+
+.numero:hover,
+.igual:hover
+{
+    background-color: #3e8e41;
+}
+
+.numero:active,
+.igual:active
+{
+    transform: translateY(4px);
+
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+}
+
+
+
+#button, #button2, #button3,
+#button4, #button5, #button6,#button20, #button21, #button22, #button23,
+#numC,
+.igual{
+    background-color: #0af;
+}
+
+#button:hover, #button2:hover, #button3:hover,
+#button4:hover, #button5:hover, #button6:hover,#button20:hover, #button21:hover, #button22:hover, #button23:hover,
+#numC:hover,
+.igual:hover{
+    background-color: #07a;
+}
+
+#button:active, #button2:active, #button3:active,
+#button4:active, #button5:active, #button6:active,#button20:active, #button21:active, #button22:active, #button23:active,
+#numC:active,
+.igual:active{
+    background-color: #07a;
+}
+
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+
+table
+{
+    position: absolute;
+    z-index: 777;
+    top: 6vw;
+    /*background: linear-gradient(to bottom, red 0%, green 50%, yellow 100%);*/
+    left: 38vw;
+    padding: 1vw;
+    border: 3px solid black;
+    border-radius: 33px;
+    background-color: rgba(156,20,156, 0.3);
+}
+
+.color_display
+{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    height: 30px;
+    width: 94%;
+    padding: 5px;
+    text-align: right;
+    color: #0f0;
+    border: 6px inset white;
+    background-color: #000;
+    border-radius: 20px;
+    white-space: nowrap;
+}
