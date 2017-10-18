@@ -1,0 +1,17 @@
+#paisajes
+{
+    width: 25vw;
+
+    border-radius: 100px;
+    box-shadow: 5px 5px black;
+}
+
+li
+{
+    list-style: none;
+}
+
+.importante{
+    width: 20vw;
+
+}
