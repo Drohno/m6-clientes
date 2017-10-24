@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body onload="calcula();">
+        
+           <h2>Ejercicio Práctico</h2>  
+           <p>
+            Realiza un programa sencillo en JavaScript que calcule la letra del DNI a partir del número de DNI introducido por pantalla (prompt). El resultado se deberá mostrar en un párrafo HTML.
+            <br>
+            La forma de calcular la letra consiste en dividir el número de DNI entre 23 y el resto de la división indica la posición de la letra en el siguiente array:
+            <br>            
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+            <br>            
+            Consideraciones:<br>
+            •	Se puede utilizar el método parseInt() para pasar un string a número entero.<br>
+            •	Se puede utilizar el método toUpperCase() para convertir un string a mayúsculas.<br>
+            •	Para conseguir el resto de una división se puede utilizar el operador %.<br>
+            •	Se deberá validar el número introducido para que se encuentre en el siguiente intervalo: [0,99999999].<br>
+            •	Se puede utilizar innerHTML para insertar texto en un párrafo HTML.<br>
+            </p>
+            <br><br>
+            <p id="resultado"></p>
+    </body>
+    <script src="index.js"></script>
+</html>
