@@ -15,6 +15,10 @@ function calcula(){
         alert("Has introducido un valor menor de 8 dígitos");
         calcula();
     }
+    else if(numText.length > 8){
+        alert("Has introducido un valor mayor de 8 dígitos");
+        calcula();
+    }
     else{
         if(numero < 0 || numero > 99999999){
             alert("Has introducido un valor erróneo. Tiene que estar entre 0 y 99999999");
