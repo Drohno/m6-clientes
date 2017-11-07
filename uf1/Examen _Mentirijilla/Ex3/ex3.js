@@ -25,6 +25,7 @@ function setDateFrom(datepicker) {
     }
 }
 
+//Diferencia en dias
 function differenceBetweenDates() {
     var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
     var temp = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <script>
+        var frutas = ["manzana", "pera", "melecoton", "platano", "melon", "sandia", "naranja"];
+        document.write("<div>");
+        document.write("<h3>Array original:     <span>"+frutas+"</span></h3>");
+        document.write("<hr>");
+        document.write("<h3>El primer termino es: <span>"+frutas[0]+"</span></h3>");
+        document.write("<hr>");
+        frutas = frutas.sort();
+        document.write("<h3>El array ordenado es: <span>"+frutas+"</span></h3>");
+        document.write("<hr>");
+        frutas.shift();
+        document.write("<h3>El array resultado tras eliminar el primer termino es: <span>"+frutas+"</span></h3>");
+        document.write("<hr>");
+        frutas.splice(2, 1);
+        frutas.push("kiwi");
+        document.write("<h3>El array resultado tras eliminar el tercer término y añadir kiwi es: <span>"+frutas+"</span></h3>");
+        document.write("<hr>");
+        document.write("<h3>El ultimo termino es: <span>"+frutas[frutas.length-1]+"</span></h3>");
+        document.write("</div>");
+    </script>
+    <style>
+        body{
+            background-color: #599aff;
+        }
+        div{
+            margin: 5% 30% 0;
+            text-align: center;
+            text-shadow: 1px 1px lightgrey;
+            background-color: rgba(0,0,0,.2);
+            border-radius: 40px;
+            padding: 10px;
+            border: 10px outset darkgrey;
+        }
+        span{
+            color: #ffb367;
+            font-style: oblique;
+            text-shadow: 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>

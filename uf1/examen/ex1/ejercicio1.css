@@ -1,0 +1,38 @@
+body{
+    background-color: #599aff;
+}
+
+div{
+    margin-left: 33%;
+    width: 25%;
+    border: 10px inset grey;
+    padding: 10px;
+    background-color: rgba(255,255,255,.2);
+}
+
+input, select, label, t{
+    font-size: 20px;
+}
+
+input{
+    border-style: dotted;
+    margin-bottom: 10px;
+    padding: 2px;
+    background-color: rgba(255,255,255,.2);
+}
+
+select{
+    border-style: none;
+}
+
+button{
+    border: 2px black outset;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+marquee{
+    font-style: oblique;
+    color: #ffb367;
+    text-shadow: 1px 2px black;
+}

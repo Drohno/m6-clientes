@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <link href="ejercicio1.css" rel="stylesheet">
+</head>
+<body>
+<marquee behavior="alternate" scrollamount="5"><h1>Calculadora IMC by David Roldan Nocelo</h1></marquee>
+    <div>
+        <label>Nombre: </label>
+        <input id="nombre" type="text" placeholder="Introduce tu nombre" value="David RN    ">
+        <br>
+        <label>Fecha de nacimiento: </label>
+        <input id="fecha" type="date">
+        <br>
+        <label>Altura (cm): </label>
+        <input id="altura" type="number" setp="1" min="1" max="250" value="1">
+        <br>
+        <label>Peso (kg): </label>
+        <input id="peso" type="number" setp="1" min="1" max="300" value="1">
+        <br>
+        <label>Sexo: </label>
+        <select id="sexo">
+            <option value="h" selected>Hombre</option>
+            <option value="m">Mujer</option>
+        </select>
+        <br>
+        <br>
+        <button id="calcular" onclick="calcular()">Calcular</button>
+        <hr>
+        <label>Edad: </label>
+        <t id="edad">--</t>
+        <br>
+        <label>IMC: </label>
+        <t id="imc">--</t>
+        <br>
+        <label>Diagnostico: </label>
+        <t id="diagnos">--</t>
+
+    </div>
+    <script src="ejercicio1.js"></script>
+</body>
+</html>
