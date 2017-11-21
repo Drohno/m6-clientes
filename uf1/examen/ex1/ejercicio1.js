@@ -12,7 +12,6 @@ function calcular(){
         alert("Nombre no introducido");
         error = true;
     }
-
     try{
         fecha =  document.getElementById("fecha").value;
         fecha = new Date(fecha);
