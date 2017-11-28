@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio DOM1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input{
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    
+
+<body id="cuerpo">
+
+    <h2>Ejercicio DOM1</h2>
+
+    <ul id="lista">
+    </ul>
+
+    <input type="button" value="Añadir elemento" onclick="anade();">
+    <input type="button" value="Añadir elemento en posicion: " onclick="anadeSpecific();">
+    <input id="specific" type="number" value="0" min="0" step="1">
+    <input  id="clon" type="button" value="Clonar" onclick="clonar()">
+
+    <script>
+
+         /******************************************************************\
+         *                                                                  *
+         *                   Code by David Roldan Nocelo                    *
+         *                                                                  *
+         \******************************************************************/
+
+
+         var father = document.getElementById("lista");
+         var termino = 0;
+
+         function anade() {
+             var li = document.createElement("li");
+             li.innerHTML = "Termino de la lista: "+termino;
+             document.getElementById("lista").appendChild(li);
+             termino++;
+             ModMaxSpecific();
+             recalcular();
+         }
+
+         var especifico = false;
+         function anadeSpecific(){
+             var li = document.createElement("li");
+             father.insertBefore(li, document.getElementById(document.getElementById("specific").value));
+             especifico = true;
+             recalcular();
+         }
+
+         function clonar(){
+             document.body.appendChild(father.cloneNode(true));
+             document.body.removeChild(document.getElementById("clon"));
+         }
+
+
+         function recalcular(){
+             var lista = father.getElementsByTagName("li");
+             for(var i=0; i<father.childElementCount;i++){
+                 lista[i].setAttribute("id", i);
+                 if(i==document.getElementById("specific").value && especifico){
+                     lista[i].innerHTML = "Termino de la lista: "+ i +" <-- Nueva insercion";
+                     especifico = false;
+                 }else{
+                     lista[i].innerHTML = "Termino de la lista: "+ i;
+                 }
+
+             }
+             termino = lista.length+1;
+             ModMaxSpecific();
+         }
+
+         function creaboton(){
+             var boton = document.createElement("input");
+             boton.setAttribute("type", "button");
+             boton.setAttribute("onclick", "elimina()");
+             boton.setAttribute("value", "Eliminar elemento");
+             document.getElementById("cuerpo").appendChild(boton);
+         }
+
+         var iniciales = 5;
+
+         function addInitials(){
+             for(var i=0;i<iniciales;i++){
+                 anade();
+             }
+         }
+
+         function addIDs(){
+             var lista = father.getElementsByTagName("li");
+             for(var i=0; i<father.childElementCount;i++){
+                lista[i].setAttribute("id", i);
+             }
+             termino = lista.length+1;
+         }
+
+         function ModMaxSpecific(){
+             document.getElementById("specific").setAttribute("max", father.getElementsByTagName("li").length);
+         }
+
+         function elimina() {
+              if (termino > 0){
+                  father.removeChild(father.lastElementChild);
+              }
+             ModMaxSpecific();
+             recalcular();
+         }
+
+         window.onload = function(){
+             addInitials();
+             addIDs();
+             document.getElementById("specific").value = 0;
+             ModMaxSpecific();
+             creaboton();
+         };
+
+         /******************************************************************\
+         *                                                                  *
+         *                   Code by David Roldan Nocelo                    *
+         *                                                                  *
+         \******************************************************************/
+
+
+    </script>
+</body>
+    
+</html>

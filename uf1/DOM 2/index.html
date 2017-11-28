@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejercicio DOM2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table, tr{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="caja1">
+            <h2>Ejercicios del <span class="destacado">curso javascript</span></h2>
+            <img name ="jsLogo" src="http://jscoderetreat.com/img/why-js.png" alt="Javascript" title="Logo de Javascritp" height="200" width="200">
+        </div>
+        <div id="caja2">
+            <h2><strong>Práctica 2:</strong> Modelo de objetos del documento</h2>
+            <img name ="domLogo" src="https://ourcodeworld.com/public-media/articles/articleocw-56bba37e791bc.png" alt="DOM" title="Logo de dom" height="200" width="200">
+        </div>
+    </body>
+</html>
+
+<script>
+
+    const webcontent = document.body.getElementsByTagName("*");
+
+    console.log(webcontent);
+
+    const body = document.getElementsByTagName("body")[0];
+
+    body.appendChild(document.createElement("hr"));
+    body.appendChild(document.createTextNode("Resultado analisis del DOM de la web"));
+
+    const table = document.createElement("table");
+
+    for(var i=0; i<webcontent.length;i++){
+        var tr = document.createElement("tr");
+        tr.appendChild(document.createTextNode(webcontent.item(i).nodeName));
+        table.appendChild(tr);
+    }
+
+    body.appendChild(table);
+
+
+
+
+
+
+
+</script>
