@@ -2,9 +2,9 @@
 
 var clientes = [];
 
-clientes.push(new Cliente(clientes.length, "Carlos", 1000));
+clientes.push(new Cliente(clientes.length, "Carlos", -19832));
 clientes.push(new Cliente(clientes.length, "Roger", 2000));
-clientes.push(new Cliente(clientes.length, "Ruben", 3000));
+clientes.push(new Cliente(clientes.length, "Ruben", -3123));
 clientes.push(new Cliente(clientes.length, "David", 4000));
 
 function generateTable(){
@@ -51,7 +51,7 @@ function generateTable(){
         }
         listado.appendChild(fila);
     }
-
+    refreshScreen();
 }
 
 function amount(mensaje){
@@ -76,5 +76,10 @@ function modifySueldo(id, accion){
 function refreshScreen(){
     for(var i=0; i<clientes.length; i++){
         document.getElementById(clientes[i].id).innerHTML = clientes[i].saldo+"€";
+        if(clientes[i].saldo < 0){
+            document.getElementById(clientes[i].id).setAttribute("class", "red");
+        }else{
+            document.getElementById(clientes[i].id).setAttribute("class", "black");
+        }
     }
 }
