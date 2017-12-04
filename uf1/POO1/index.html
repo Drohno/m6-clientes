@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>POO1</title>
+        <meta charset="utf-8">
+        <style>
+            #mySign{
+                text-align: center; height: 80px; width: 100%; overflow: hidden; resize: none; border-style: none;
+                /*NOT SELECTABLE*/
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            }
+            i{
+                cursor: pointer;
+            }
+            table, tr, td, th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                padding: 5px;
+            }
+        </style>        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/cliente.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body  onload="generateTable();">
+        <textarea id="mySign" readonly>
+        /******************************************************************\
+        *                                                                  *
+        *              Proudly coded by David Roldan Nocelo                *
+        *                                                                  *
+        \******************************************************************/
+        </textarea>   
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Identificador</th>
+                    <th>Nombre Cliente</th>
+                    <th>Saldo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listado">                    
+            </tbody>
+        </table>     
+    </body>
+</html>
