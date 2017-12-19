@@ -1,0 +1,3 @@
+Sección 1: Zona para dar de alta clientes de un banco (Nombre y saldo inicial).
+Sección 2: Zona para ingresar o retirar fondos de la cuenta de un cliente (Número de cliente, importe y acción (ingresar/retirar).
+Sección 3: Tabla con todos los clientes (Número de cliente, nombre y saldo).
